@@ -16,6 +16,8 @@ namespace WFCalc
         public Form1()
         {
             InitializeComponent();
+            var methods = new Calculator().Methods();
+            cbOperation.DataSource = methods;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -27,19 +29,36 @@ namespace WFCalc
         {
             var calc = new Calculator();
 
-
-            var x = Convert.ToInt32(tbX.Text);
-            var y = Convert.ToInt32(tbY.Text);
+            if (tbX.Text == "") tbX.Text = "0";
+            if (tbY.Text == "") tbY.Text = "0";
+            { 
+            var x = Convert.ToDouble(tbX.Text);
+            var y = Convert.ToDouble(tbY.Text);
 
             var oper = cbOperation.SelectedItem.ToString();
 
             var typeCalc = typeof(Calculator);
 
             var method = typeCalc.GetMethod(oper);
-            var result = method.Invoke(calc, new object[] {x, y});
+                if (method.Name != "Fact" && method.Name != "Sqrt")
+                {
+                    var result = method.Invoke(calc, new object[] { x, y });
 
-            lbResult.Text = string.Format("Result {0}(({1}, {2}) = {3}", oper, x, y, result);
+                    lbResult.Text = string.Format("Result {0} ({1}, {2}) = {3}", oper, x, y, result);
+                }
+                else
+                {
+                    var result = method.Invoke(calc, new object[] { x });
+
+                    lbResult.Text = string.Format("Result {0} ({1}) = {2}", oper, x, result);
+                }
             //lbResult.Text = $"Result {oper}(({x}, {y}) = {result}";
+            }
+        }
+
+        private void lbResult_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

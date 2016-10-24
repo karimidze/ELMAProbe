@@ -66,16 +66,14 @@
             this.lbResult.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbResult.Location = new System.Drawing.Point(0, 248);
             this.lbResult.Name = "lbResult";
-            this.lbResult.Size = new System.Drawing.Size(35, 13);
+            this.lbResult.Size = new System.Drawing.Size(59, 13);
             this.lbResult.TabIndex = 3;
-            this.lbResult.Text = "label1";
+            this.lbResult.Text = "Результат";
+            this.lbResult.Click += new System.EventHandler(this.lbResult_Click);
             // 
             // cbOperation
             // 
             this.cbOperation.FormattingEnabled = true;
-            this.cbOperation.Items.AddRange(new object[] {
-            "Sum",
-            "Divide"});
             this.cbOperation.Location = new System.Drawing.Point(103, 90);
             this.cbOperation.Name = "cbOperation";
             this.cbOperation.Size = new System.Drawing.Size(121, 21);
@@ -92,7 +90,7 @@
             this.Controls.Add(this.tbX);
             this.Controls.Add(this.btnCalc);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Calc";
             this.ResumeLayout(false);
             this.PerformLayout();
 
