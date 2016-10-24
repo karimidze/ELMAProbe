@@ -1,0 +1,11 @@
+E:\Project\Стажировка\Calc\WFCalc\bin\Debug\WFCalc.exe.config
+E:\Project\Стажировка\Calc\WFCalc\bin\Debug\WFCalc.exe
+E:\Project\Стажировка\Calc\WFCalc\bin\Debug\WFCalc.pdb
+E:\Project\Стажировка\Calc\WFCalc\bin\Debug\Calc.dll
+E:\Project\Стажировка\Calc\WFCalc\bin\Debug\Calc.pdb
+E:\Project\Стажировка\Calc\WFCalc\obj\Debug\WFCalc.csprojResolveAssemblyReference.cache
+E:\Project\Стажировка\Calc\WFCalc\obj\Debug\WFCalc.Form1.resources
+E:\Project\Стажировка\Calc\WFCalc\obj\Debug\WFCalc.Properties.Resources.resources
+E:\Project\Стажировка\Calc\WFCalc\obj\Debug\WFCalc.csproj.GenerateResource.Cache
+E:\Project\Стажировка\Calc\WFCalc\obj\Debug\WFCalc.exe
+E:\Project\Стажировка\Calc\WFCalc\obj\Debug\WFCalc.pdb

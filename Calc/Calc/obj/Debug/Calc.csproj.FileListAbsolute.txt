@@ -1,0 +1,5 @@
+E:\Project\Стажировка\Calc\Calc\obj\Debug\Calc.csprojResolveAssemblyReference.cache
+E:\Project\Стажировка\Calc\Calc\bin\Debug\Calc.dll
+E:\Project\Стажировка\Calc\Calc\bin\Debug\Calc.pdb
+E:\Project\Стажировка\Calc\Calc\obj\Debug\Calc.dll
+E:\Project\Стажировка\Calc\Calc\obj\Debug\Calc.pdb
