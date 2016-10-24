@@ -31,7 +31,10 @@ namespace WFCalc
 
             if (tbX.Text == "") tbX.Text = "0";
             if (tbY.Text == "") tbY.Text = "0";
-            { 
+
+            tbX.Text = tbX.Text.Replace(".", ",");
+            tbY.Text = tbY.Text.Replace(".", ",");
+
             var x = Convert.ToDouble(tbX.Text);
             var y = Convert.ToDouble(tbY.Text);
 
@@ -53,7 +56,7 @@ namespace WFCalc
                     lbResult.Text = string.Format("Result {0} ({1}) = {2}", oper, x, result);
                 }
             //lbResult.Text = $"Result {oper}(({x}, {y}) = {result}";
-            }
+            
         }
 
         private void lbResult_Click(object sender, EventArgs e)
