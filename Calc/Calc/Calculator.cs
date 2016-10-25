@@ -21,6 +21,8 @@ namespace Calc
         double? Fact(double x);
 
         double? Sqrt(double x);
+
+        Operation[] GetOperations();
     }
     public class Calculator : ICalculator
     {
@@ -72,10 +74,28 @@ namespace Calc
             return Math.Sqrt(x);
         }
 
-        public string[] Methods()
+        public Operation[] GetOperations()
         {
-            return new[] { "Sum", "Divide", "Subtr", "Mult", "Exp", "Fact", "Sqrt" };
+            return new Operation[]
+            {
+                new Operation(){Name = "Sum", ParameterCount = 2},
+                new Operation(){Name = "Divide", ParameterCount = 2},
+                new Operation(){Name = "Subtr", ParameterCount = 2},
+                new Operation(){Name = "Mult", ParameterCount = 2},
+                new Operation(){Name = "Exp", ParameterCount = 2},
+                new Operation(){Name = "Fact", ParameterCount = 1},
+                new Operation(){Name = "Sqrt", ParameterCount = 1},
+            };
         }
     }
 
+    public class Operation
+    {
+        public string Name { get; set; } 
+        public int ParameterCount { get; set; } 
+        public override string ToString()
+        {
+            return Name;
+        }
+    }
 }

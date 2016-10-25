@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "..\Unit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WFCalc", "WFCalc\WFCalc.csproj", "{456F7C1E-9438-47FA-A334-B01400A71698}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCalc", "WebCalc\WebCalc.csproj", "{11453C6A-A166-45DC-94E2-4B5D89ACDB1D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{456F7C1E-9438-47FA-A334-B01400A71698}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{456F7C1E-9438-47FA-A334-B01400A71698}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{456F7C1E-9438-47FA-A334-B01400A71698}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11453C6A-A166-45DC-94E2-4B5D89ACDB1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11453C6A-A166-45DC-94E2-4B5D89ACDB1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11453C6A-A166-45DC-94E2-4B5D89ACDB1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11453C6A-A166-45DC-94E2-4B5D89ACDB1D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
