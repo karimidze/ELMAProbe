@@ -24,8 +24,9 @@ namespace WebCalc.Controllers
 
             var x = model.X;
             var y = model.Y;
+            var opers = calc.GetOperations();
             var args = new object[] { x, y };
-            if (model.Operation == "1")
+            if (opers.FirstOrDefault(a => a.Name == model.Operation).ParameterCount == 1)
             {
                 args = new object[] { x };
             }

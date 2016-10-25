@@ -18,7 +18,7 @@ namespace WebCalc.Models
 
         public List<SelectListItem> ListOperations { get; set; }
 
-        public int Operation { get; set; }
+        public string Operation { get; set; }
 
         public CalcViewModel()
         {
@@ -29,7 +29,7 @@ namespace WebCalc.Models
             {
                 var item = new SelectListItem();
                 item.Text = opers[i].Name;
-                item.Value = opers[i].ParameterCount.ToString();
+                item.Value = opers[i].Name;
                 ListOperations.Add(item);
             }
         }
