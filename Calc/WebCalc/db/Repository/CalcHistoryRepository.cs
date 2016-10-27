@@ -14,7 +14,9 @@ namespace WebCalc.db.Repository
         {
             var connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=E:\\Project\\Стажировка\\Calc\\WebCalc\\App_Data\\DBCalc.mdf;Integrated Security=True";
             string queryString = "INSERT INTO dbo.CalcHistory (X, Y, Result, Operation, CreationDate) VALUES ({0},{1},{2},'{3}', GETDATE());";
-            //char separator = '.';
+            //Char separator = System.Globalization.CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator[0];
+            //item.Result.ToString().Replace(',', separator);
+            //Convert.ToDouble(item.Result);
             var query = string.Format(queryString, item.X, item.Y, item.Result, item.Operation);
 
             using (SqlConnection connection =
