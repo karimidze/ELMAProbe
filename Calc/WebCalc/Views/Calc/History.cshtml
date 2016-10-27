@@ -1,0 +1,62 @@
+﻿@model IEnumerable<WebCalc.db.Models.CalcHistory>
+
+@{
+    ViewBag.Title = "History";
+}
+
+<h2>History</h2>
+
+<p>
+    Отсортировать по полю:
+    @{var opers = ViewData["Operations"] as IEnumerable<SelectListItem>;}
+    @{Html.BeginForm();}
+    @Html.DropDownList("Operations", opers, "")
+    <input type="submit" value="Sort" class="btn btn-default" />
+    @{Html.EndForm();}
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Result)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.X)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Y)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Operation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreationDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Result)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.X)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Y)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Operation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreationDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -20,7 +20,7 @@ namespace WFCalc
 
             calc = new Calculator();
 
-            cbOperation.DataSource = calc.GetOperations(); ;
+            cbOperation.DataSource = Calculator.GetOperations(); ;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
